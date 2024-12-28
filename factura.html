@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&lt;&lt;[estado]&gt;&gt;</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            margin: 20px;
+        }
+
+        .container {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between; /* Distribuye elementos con espacio entre ellos */
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            width: 20%;
+        }
+
+        .title {
+            text-align: center;
+            width: 60%;
+        }
+
+        .factura-info {
+            width: 20%;
+            text-align: right;
+        }
+
+        .factura-info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .factura-info td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .client-info, .bank-info {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .client-info table, .bank-info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .client-info td, .bank-info td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .details th, .details td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .summary {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .summary table {
+            width: auto;
+            border-collapse: collapse;
+        }
+
+        .summary td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .bank-info h3 {
+            margin-top: 10px;
+        }
+
+        .note p {
+            font-size: 12px;
+        }
+
+        .footer {
+            font-size: 11px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://startiotsystem.com/wp-content/uploads/2024/11/START-IOT.webp" alt="Logo" style="width: 100px;">
+            </div>
+            <div class="title">
+                <h1>START IOT SYSTEM S.A.S</h1>
+                <h2>NIT: 901876210-8</h2>
+                <h2>Dirección: CL 72 NO. 8 13, Bogotá, Colombia</h2>
+                <h2>Teléfono: 3192650209</h2>
+            </div>
+            <div class="factura-info">
+                <table>
+                    <tr>
+                        <td><strong>&lt;&lt;[estado]&gt;&gt;</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>No:</strong> &lt;&lt;[Numero_factura]&gt;&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fecha Pedido:</strong> &lt;&lt;[fecha]&gt;&gt;</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Vence:</strong> &lt;&lt;[fecha]&gt;&gt;</td>
+                    </tr>
+                </table>
+            </div>'
+            
+        </div>
+
+          <div class="client-info">
+    <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+            <!-- Datos del Cliente -->
+            <td style="width: 50%; vertical-align: top; border: 1px solid black; padding: 8px;">
+                <!-- Información de la empresa -->
+                <strong>SEÑOR(ES):</strong> &lt;&lt;ANY(SELECT(empresas[Rason Social], [id_empresa] = [_THISROW].[id_empresa]))&gt;&gt;<br>
+                <strong>DIRECCIÓN:</strong> &lt;&lt;ANY(SELECT(empresas[direccion], [id_empresa] = [_THISROW].[id_empresa]))&gt;&gt;<br>
+                <strong>PAÍS:</strong> &lt;&lt;ANY(SELECT(empresas[pais], [id_empresa] = [_THISROW].[id_empresa]))&gt;&gt;<br>
+                <strong>CIUDAD:</strong> &lt;&lt;ANY(SELECT(empresas[ciudad], [id_empresa] = [_THISROW].[id_empresa]))&gt;&gt;<br>
+                <strong>TELÉFONO:</strong> &lt;&lt;ANY(SELECT(empresas[telefono], [id_empresa] = [_THISROW].[id_empresa]))&gt;&gt;<br>
+                
+                <!-- Espaciado -->
+                <hr style="border: none; border-top: 1px solid #ddd; margin: 10px 0;">
+                
+                <!-- Información del contacto -->
+                <strong>Nombre Contacto:</strong>  &lt;&lt;[id_cliente]&gt;&gt;<br>
+                <strong>Teléfono Contacto:</strong> &lt;&lt;ANY(SELECT(Contactos[telefono], [id_contacto] = [id_cliente]))&gt;&gt;<br>
+                <strong>Email:</strong> &lt;&lt;ANY(SELECT(Contactos[email], [id_contacto] = [id_cliente]))&gt;&gt;<br>
+              </td>
+            
+            <!-- Datos del Vendedor -->
+            
+            <td style="width: 50%; vertical-align: top; padding: 16px; border: 1px solid black; font-family: Arial, sans-serif;">
+        <!-- Encabezado -->
+        <div style="font-size: 18px; font-weight: bold; margin-bottom: 10px;">Remitente</div>
+        
+        <!-- Información de la empresa -->
+        <div style="font-size: 16px; margin-bottom: 5px;">START IOT SYSTEM S.A.S.</div>
+        <div style="font-size: 14px; color: #555;">NIT: 901876210-8</div>
+        <div style="font-size: 14px; color: #555;">Carrera 72 No 8 -23</div>
+        <div style="font-size: 14px; color: #555;">Bogotá, Colombia</div>
+        
+        <!-- Espaciado -->
+        <hr style="border: none; border-top: 1px solid #ddd; margin: 10px 0;">
+        
+        <!-- Información del contacto -->
+        <div style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">Contacto:</div>
+        <div style="font-size: 14px; color: #333;">
+        <strong>VENDEDOR:</strong> &lt;&lt;ANY(SELECT(Personal[Nombre], [id_personal] = [_THISROW].[Vendedor]))&gt;&gt;<br>
+        <strong>TELÉFONO:</strong> +57 313 8128234<br>        
+        <strong>CORREO:</strong> comercial@startiotsystem.com    </div>
+</td>
+
+        </tr>
+    </table>
+</div>
+
+                       
+
+        <div class="details">
+  
+                   <!-- Tabla Unificada de Productos y Servicios -->
+        <h3>Productos y Servicios</h3>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Unidad de Medida</th>
+                    <th>Precio por Unidad</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Inicio de Productos -->
+                <p>&lt;&lt;Start: [Related Detalles_Facturacions]&gt;&gt;</p>
+                <tr>
+                    <td>&lt;&lt;LOOKUP([ProductoID], "Productos2", "ID_PRODUCTO", "EQUIPO")&gt;&gt;</td>
+                    <td>&lt;&lt;[Cantidad]&gt;&gt;</td>
+                    <td>Unidad</td>
+                    <td>&lt;&lt;[PrecioUnitario]&gt;&gt;</td>
+                    <td>&lt;&lt;[Cantidad] * [PrecioUnitario]&gt;&gt;</td>
+                </tr>
+                <p>&lt;&lt;End&gt;&gt;</p>
+        
+                <!-- Inicio de Servicios -->
+                <p>&lt;&lt;Start: [Related Detalles_Servicios]&gt;&gt;</p>
+                <tr>
+                    <td>&lt;&lt;[idservicio]&gt;&gt;</td>
+                    <td>&lt;&lt;[Cantidad]&gt;&gt;</td>
+                    <td>Licencia</td>
+                    <td>&lt;&lt;[PrecioUnitario]&gt;&gt;</td>
+                    <td>&lt;&lt;[Cantidad] * [PrecioUnitario]&gt;&gt;</td>
+                </tr>
+                <p>&lt;&lt;End&gt;&gt;</p>
+            </tbody>
+        </table>
+        
+                                
+            
+        </div>
+
+         <div class="summary">
+        <table>
+            <tr><td><strong>Subtotal:</strong></td><td>$&lt;&lt;[Sub_total]-[IVA]&gt;&gt;</td></tr> 
+            <tr><td><strong>Impuesto:</strong></td><td>$&lt;&lt;[IVA]&gt;&gt;</td></tr> 
+            <tr><td><strong>Total:</strong></td><td>$&lt;&lt;[Precio_Total]&gt;&gt;</td></tr> 
+        </table>
+         </div>
+
+
+        <div class="bank-info">
+            <h3>Información Bancaria</h3>
+            <table>
+                <tbody>
+                    <tr><td><strong>BANCO:</strong> BANCOLOMBIA</td></tr> 
+                    <tr><td><strong>DIRECCIÓN BANCO:</strong> Av Industriales Carrera 48 # 26 -85P1 Torre Norte</td></tr> 
+                    <tr><td><strong>CUENTA:</strong> No 912-625947-56 AHORROS</td></tr> 
+                    <tr><td><strong>NOMBRE DE:</strong>CRISTIAN MOSQUERA</td></tr> 
+                    <tr><td><strong>CÓDIGO SWIFT:</strong> COLOCOBMXXX</td></tr> 
+                </tbody>
+            </table>
+
+            <h3>Nota</h3> 
+            <p><strong>Nota:</strong> POR CUALQUIER MEDIO DE PAGO DIFERENTE A TRANSFERENCIA BANCARIA, DEBE ADICIONAR AL PAGO $5000 POR TRANSACCIÓN REALIZADA, CONCEPTO DE COSTOS BANCARIOS.</p>l
+
+            <p>Garantía: 1 año según fecha de Facturación. Aplican restricciones.</p>
+            <p>Al realizar el pago enviar soporte al correo: admin@startiotsystem.com </p>
+        </div>
+    </div>
+</body>
+</html>

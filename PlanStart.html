@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start IoT - El futuro es ahora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: #4b0082;
+            color: white;
+            padding: 20px;
+            display: flex; /* Cambiado para usar flexbox */
+            align-items: center; /* Centra verticalmente los elementos */
+        }
+        .header img {
+            height: 50px; /* Ajusta según el tamaño de tu logo */
+            margin-right: 15px; /* Espacio entre el logo y el texto */
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+        }
+        .plan-title {
+            background-color: #4b0082; /* Color de fondo para PLAN START */
+            color: white; /* Color del texto */
+            text-align: center; /* Centrar texto */
+            padding: 20px; /* Espaciado interno */
+            font-size: 36px; /* Tamaño de fuente mayor para mayor visibilidad */
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            color: #4b0082;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+        .features {
+            display: flex; /* Usar flexbox para la grilla */
+            flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+            gap: 15px; /* Espacio entre elementos */
+            justify-content: space-between; /* Distribuye espacio entre elementos */
+        }
+        .feature {
+            flex-basis: calc(48%); /* Ajusta para que quepan dos en cada fila */
+            background: #f9f9f9;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center; /* Centra el texto dentro del cuadro */
+        }
+        .feature img {
+            max-width: 100%;
+            height: auto; /* Mantiene la proporción de las imágenes */
+            object-fit: cover; /* Mantiene la proporción de las imágenes */
+            margin-bottom: 10px; /* Espacio debajo de la imagen */
+        }
+        .feature h3 {
+            font-size: 16px; /* Tamaño del texto del título */
+            margin: 5px 0; /* Margen superior e inferior del título */
+        }
+        .feature p {
+            font-size: 14px; /* Tamaño del texto de la descripción */
+        }
+        .cta {
+            text-align: center; /* Centra el texto */
+            margin-top: 20px; /* Margen superior */
+        }
+        .cta a {
+            display: inline-block; /* Hace que el enlace se comporte como un bloque */
+            background: #25d366; /* Color del botón */
+            color: white; /* Color del texto */
+            padding: 15px 30px; /* Espaciado interno del botón */
+            font-size: 16px; /* Tamaño del texto del botón */
+            text-decoration: none; /* Sin subrayado en el texto */
+            border-radius: 5px; /* Esquinas redondeadas del botón */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra del botón */
+            transition: background-color 0.3s; /* Transición suave al cambiar de color */
+        }
+        .cta a:hover {
+           background-color: #20b456; /* Color al pasar el ratón por encima del botón */
+       }
+       .footer {
+           background-color: #4b0082; /* Color de fondo del pie de página */
+           color: white; /* Color del texto en el pie de página */
+           text-align: center; /* Centra el texto en el pie de página */
+           padding: 10px; /* Espaciado interno en el pie de página */
+       }
+       .footer p {
+           margin: 0; /* Sin margen en los párrafos del pie de página */
+           font-size: 12px; /* Tamaño del texto en el pie de página */
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+           <img src="https://via.placeholder.com/150x50" alt="Logo Start IoT"> <!-- Logo -->
+           <div>
+               <h1>Start IoT</h1>
+               <p>El futuro es ahora</p>
+           </div>
+       </div>
+
+       <!-- Plan Title -->
+       <div class="plan-title">
+           PLAN START
+       </div>
+
+       <!-- Main Content -->
+       <div class="content">
+           <p>Localiza tus vehículos y activos al instante, asegurando control y seguridad en cada recorrido. Mantente informado con acceso inmediato y monitoreo constante para una gestión logística eficaz.</p>
+
+           <h3>Características Incluidas:</h3>
+
+           <div class="features">
+            <div class="feature">
+                <img src="https://via.placeholder.com/150" alt="Rastreo en Tiempo Real">
+                <h3>Rastreo en Tiempo Real</h3>
+                <p>Monitorea y localiza tus vehículos en cualquier momento.</p>
+                <div class="cta"><a href="#rastreo">¡Conoce Más!</a></div>
+            </div>
+            <div class="feature">
+                <img src="https://via.placeholder.com/150" alt="Alertas Inteligentes">
+                <h3>Alertas Inteligentes</h3>
+                <p>Recibe notificaciones clave en tiempo real.</p>
+                <div class="cta"><a href="#alertas">¡Explora!</a></div>
+            </div>
+            <div class="feature">
+                <img src="https://via.placeholder.com/150" alt="Control Total">
+                <h3>Control Total del Vehículo</h3>
+                <p>Gestiona funciones avanzadas como bloqueo remoto.</p>
+                <div class="cta"><a href="#control">¡Descubre!</a></div>
+            </div>
+        </div>
+        
+        
+        <div class="feature" style="flex-basis: 100%; background-color: #e6f7ff; padding: 15px; border-radius: 5px; display: flex; align-items: flex-start;">
+            <img src="https://via.placeholder.com/150" alt="KIT START" style="margin-right: 15px;">
+            <div style="flex-grow: 1; text-align: left;">
+                <h3 style="margin-bottom: 10px; font-size: 24px; color: #333;">KIT START</h3>
+                <p style="font-weight: bold;">Te proveemos todo lo que necesitas para empezar:</p>
+                <ul style="list-style-type:none; padding: 0;">
+                    <li>- Ramal: Conexión sencilla y rápida.</li>
+                    <li>- Relé ON/OFF: Control total del encendido.</li>
+                    <li>- GPS: Localización precisa en tiempo real.</li>
+                    <li>- Micrófono: Escucha en tiempo real para mayor seguridad.</li>
+                </ul>
+            </div>
+            <div class="cta" style="margin-left: 15px; align-self: center;">
+                <a href="#kitstart" style="background-color: #25d366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">¡Solicita tu Kit!</a>
+            </div>
+        </div>
+        
+        
+
+           <!-- Mensaje sobre soporte técnico -->
+           <p style="text-align:center;font-weight:bold;">
+               Contamos con soporte técnico especializado y te acompañamos en todo el proceso de instalación.
+           </p>
+
+           <!-- CTA principal -->
+           <div class="cta">
+               <a href="https://wa.me/573138128234" target="_blank">¡Solicita tu Demo Gratis!</a>
+           </div>
+
+       </div>
+
+       <!-- Footer -->
+       <div class="footer">
+           <p>Start IoT - El futuro es ahora</p>
+           <p>Teléfono:+57 313 8128234 | Correo:<a href="mailto:info@startiotsystem.com" style="color:white;"> info@startiotsystem.com</a></p> <!-- Enlace al correo -->
+       </div>
+   </div>
+</body>
+</html>
